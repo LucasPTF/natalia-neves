@@ -1,0 +1,659 @@
+/* Versão standalone convertida do layout original. */
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f8f8f6; }
+button, a { font: inherit; }
+img { max-width: 100%; }
+
+/* Elementor widget version: paste everything in this file into one Elementor HTML widget. */
+.nn-elementor-landing {
+      --bg: oklch(98% 0.004 240);
+      --surface: oklch(100% 0 0);
+      --fg: oklch(20% 0.02 240);
+      --muted: oklch(50% 0.018 240);
+      --border: oklch(90% 0.006 240);
+      --accent: oklch(56% 0.12 170);
+
+      --font-display: 'Sohne', 'Avenir Next', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+
+      --navy: oklch(27% 0.052 245);
+      --navy-soft: oklch(36% 0.055 238);
+      --sage: oklch(67% 0.07 155);
+      --sage-deep: oklch(47% 0.07 155);
+      --cream: oklch(96% 0.018 92);
+      --sand: oklch(91% 0.028 82);
+      --rose: oklch(74% 0.052 28);
+      --warn: oklch(62% 0.13 62);
+      --success: oklch(56% 0.12 150);
+      --shadow: 0 24px 80px color-mix(in oklch, var(--navy) 12%, transparent);
+      --radius: 22px;
+      --container: min(1160px, calc(100vw - 32px));
+      --nn-header-height: 86px;
+      --nn-wp-admin-offset: 0px;
+    }
+.elementor-widget-html:has(.nn-elementor-landing),
+.elementor-widget-html:has(.nn-elementor-landing) .elementor-widget-container {
+      overflow: visible !important;
+    }
+body.admin-bar .nn-elementor-landing { --nn-wp-admin-offset: 32px; }
+@media (max-width: 782px) {
+body.admin-bar .nn-elementor-landing { --nn-wp-admin-offset: 46px; }
+}
+.nn-elementor-landing * { box-sizing: border-box; }
+.nn-elementor-landing { scroll-behavior: smooth; }
+.nn-elementor-landing {
+      margin: 0;
+      padding-top: var(--nn-header-height);
+      background:
+        radial-gradient(circle at 10% 0%, color-mix(in oklch, var(--sage) 14%, transparent), transparent 34rem),
+        linear-gradient(180deg, var(--cream), var(--bg) 28rem, var(--surface));
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+.nn-elementor-landing {
+      overflow-x: clip;
+      overflow-y: visible;
+    }
+.nn-elementor-landing.nn-portal-layer {
+      position: static;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: 1.55;
+      overflow: visible;
+    }
+.nn-elementor-landing.menu-open { overflow-y: visible; }
+.nn-elementor-landing a { color: inherit; text-decoration: none; }
+.nn-elementor-landing button, .nn-elementor-landing input { font: inherit; }
+.nn-elementor-landing .site-header {
+      position: fixed;
+      top: calc(var(--nn-wp-admin-offset) + 10px);
+      left: 50%;
+      right: auto;
+      width: min(1044px, calc(100vw - 28px));
+      transform: translateX(-50%);
+      z-index: 99999;
+      padding: 6px 12px;
+      border: 1px solid color-mix(in oklch, var(--border), transparent 20%);
+      border-radius: 999px;
+      background: color-mix(in oklch, var(--surface) 94%, transparent);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 10px 28px color-mix(in oklch, var(--navy) 10%, transparent);
+      overflow: visible;
+    }
+.nn-elementor-landing .nav {
+      width: 100%;
+      margin: 0 auto;
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-radius: 999px;
+    }
+.nn-elementor-landing .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 780;
+      letter-spacing: 0;
+      color: var(--navy);
+    }
+.nn-elementor-landing .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--sage), color-mix(in oklch, var(--navy-soft) 68%, var(--sage)));
+      display: grid;
+      place-items: center;
+      color: white;
+      box-shadow: 0 14px 36px color-mix(in oklch, var(--sage) 30%, transparent);
+    }
+.nn-elementor-landing .brand-mark svg, .nn-elementor-landing .icon svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.nn-elementor-landing .nav-links { display: flex; align-items: center; gap: 22px; color: var(--muted); font-size: 14px; font-weight: 650; }
+.nn-elementor-landing .nav-links a:hover { color: var(--navy); }
+.nn-elementor-landing .nav-actions { display: flex; align-items: center; gap: 10px; }
+.nn-elementor-landing .menu-btn {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--navy);
+      align-items: center;
+      justify-content: center;
+    }
+.nn-elementor-landing .menu-btn svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+      stroke-linecap: round;
+    }
+.nn-elementor-landing .btn {
+      border: 0;
+      min-height: 46px;
+      border-radius: 999px;
+      padding: 0 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 760;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+.nn-elementor-landing .btn:hover { transform: translateY(-1px); }
+.nn-elementor-landing .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--navy), var(--sage-deep));
+      box-shadow: 0 16px 42px color-mix(in oklch, var(--sage-deep) 28%, transparent);
+    }
+.nn-elementor-landing .btn-secondary {
+      color: var(--navy);
+      background: var(--surface);
+      border: 1px solid color-mix(in oklch, var(--navy) 16%, var(--border));
+    }
+.nn-elementor-landing .btn-wide { width: 100%; }
+.nn-elementor-landing main {
+      overflow-x: clip;
+      overflow-y: visible;
+    }
+.nn-elementor-landing section {
+      padding: clamp(56px, 7vw, 104px) 0;
+      scroll-margin-top: calc(var(--nn-header-height) + var(--nn-wp-admin-offset) + 18px);
+    }
+.nn-elementor-landing .container { width: var(--container); margin: 0 auto; }
+.nn-elementor-landing .hero {
+      padding-top: clamp(34px, 5vw, 74px);
+      min-height: calc(100svh - 72px);
+      display: grid;
+      align-items: center;
+    }
+.nn-elementor-landing .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .82fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: center;
+    }
+.nn-elementor-landing .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      border: 1px solid color-mix(in oklch, var(--sage) 45%, var(--border));
+      background: color-mix(in oklch, var(--surface) 76%, var(--sage) 8%);
+      color: var(--sage-deep);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 780;
+    }
+.nn-elementor-landing h1, .nn-elementor-landing h2, .nn-elementor-landing h3 {
+      font-family: var(--font-display);
+      color: var(--navy);
+      line-height: 1.04;
+      letter-spacing: 0;
+      margin: 0;
+      text-wrap: balance;
+    }
+.nn-elementor-landing h1 { font-size: clamp(44px, 7vw, 82px); max-width: 840px; }
+.nn-elementor-landing h2 { font-size: clamp(32px, 4.6vw, 58px); }
+.nn-elementor-landing h3 { font-size: clamp(22px, 2.4vw, 32px); }
+.nn-elementor-landing p { margin: 0; }
+.nn-elementor-landing .lead {
+      max-width: 700px;
+      color: color-mix(in oklch, var(--muted), var(--navy) 12%);
+      font-size: clamp(18px, 2vw, 23px);
+      line-height: 1.5;
+    }
+.nn-elementor-landing .hero-copy { display: grid; gap: 24px; }
+.nn-elementor-landing .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.nn-elementor-landing .microcopy { color: var(--muted); font-size: 14px; }
+.nn-elementor-landing .hero-card {
+      position: relative;
+      min-height: 600px;
+      border-radius: clamp(26px, 4vw, 44px);
+      background:
+        linear-gradient(180deg, color-mix(in oklch, var(--surface) 88%, var(--cream)), color-mix(in oklch, var(--sage) 10%, var(--surface))),
+        var(--surface);
+      border: 1px solid color-mix(in oklch, var(--sage) 35%, var(--border));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+.nn-elementor-landing .portrait-slot {
+      position: absolute;
+      inset: 16px;
+      border-radius: 32px;
+      background:
+        linear-gradient(145deg, color-mix(in oklch, var(--navy-soft) 86%, var(--sage)), color-mix(in oklch, var(--sage) 62%, var(--cream)));
+      display: grid;
+      place-items: end center;
+      padding: 28px;
+      color: white;
+      isolation: isolate;
+      overflow: hidden;
+    }
+.nn-elementor-landing .portrait-slot::before {
+      content: "";
+      position: absolute;
+      width: min(72%, 300px);
+      aspect-ratio: 1;
+      bottom: 24px;
+      border-radius: 50% 50% 42% 42%;
+      background:
+        radial-gradient(circle at 50% 28%, color-mix(in oklch, var(--cream) 84%, white), transparent 0 30%, transparent 31%),
+        linear-gradient(180deg, color-mix(in oklch, var(--cream) 76%, white), color-mix(in oklch, var(--sage) 40%, white));
+      opacity: .8;
+      z-index: -1;
+    }
+.nn-elementor-landing .photo-note {
+      width: min(280px, 78%);
+      text-align: center;
+      color: color-mix(in oklch, white 88%, var(--cream));
+      font-weight: 720;
+      line-height: 1.35;
+    }
+.nn-elementor-landing .portrait-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 54% center;
+      z-index: 1;
+    }
+.nn-elementor-landing .portrait-slot::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 44%;
+      background: linear-gradient(180deg, transparent, color-mix(in oklch, var(--navy) 58%, transparent));
+      z-index: 2;
+      pointer-events: none;
+    }
+.nn-elementor-landing .hero-card-footer {
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 30px;
+      display: grid;
+      gap: 10px;
+      border-radius: 26px;
+      padding: 20px;
+      background: color-mix(in oklch, var(--surface) 88%, transparent);
+      backdrop-filter: blur(16px);
+      border: 1px solid color-mix(in oklch, var(--border), transparent 10%);
+      z-index: 3;
+    }
+.nn-elementor-landing .credential { color: var(--muted); font-size: 14px; }
+.nn-elementor-landing .section-head {
+      display: grid;
+      gap: 14px;
+      max-width: 780px;
+      margin-bottom: 34px;
+    }
+.nn-elementor-landing .split {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      gap: clamp(24px, 4vw, 56px);
+      align-items: start;
+    }
+.nn-elementor-landing .panel {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: color-mix(in oklch, var(--surface) 94%, var(--cream));
+      box-shadow: 0 16px 48px color-mix(in oklch, var(--navy) 7%, transparent);
+    }
+.nn-elementor-landing .panel-pad { padding: clamp(22px, 3vw, 34px); }
+.nn-elementor-landing .muted { color: var(--muted); }
+.nn-elementor-landing .stack { display: grid; gap: 14px; }
+.nn-elementor-landing .large-stack { display: grid; gap: 24px; }
+.nn-elementor-landing .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.nn-elementor-landing .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.nn-elementor-landing .card {
+      border: 1px solid color-mix(in oklch, var(--border), var(--sage) 12%);
+      border-radius: 20px;
+      padding: 22px;
+      background: var(--surface);
+    }
+.nn-elementor-landing .card strong { color: var(--navy); }
+.nn-elementor-landing .before-after {
+      display: grid;
+      gap: 12px;
+    }
+.nn-elementor-landing .shift {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+.nn-elementor-landing .shift-box {
+      min-height: 132px;
+      border-radius: 20px;
+      padding: 22px;
+      background: color-mix(in oklch, var(--cream) 74%, white);
+      border: 1px solid color-mix(in oklch, var(--sand), var(--border));
+      color: var(--navy);
+      font-weight: 720;
+      display: flex;
+      align-items: center;
+    }
+.nn-elementor-landing .shift-box.after {
+      background: color-mix(in oklch, var(--sage) 16%, white);
+      border-color: color-mix(in oklch, var(--sage) 38%, var(--border));
+    }
+.nn-elementor-landing .arrow {
+      display: grid;
+      place-items: center;
+      color: var(--sage-deep);
+      font-weight: 900;
+      font-size: 28px;
+    }
+.nn-elementor-landing .check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.nn-elementor-landing .check-list.panel-pad { padding: clamp(20px, 2.6vw, 32px); }
+.nn-elementor-landing .check-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: color-mix(in oklch, var(--fg), var(--navy) 14%);
+    }
+.nn-elementor-landing .tick {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: color-mix(in oklch, var(--sage) 20%, white);
+      color: var(--sage-deep);
+      font-weight: 900;
+      flex: 0 0 auto;
+    }
+.nn-elementor-landing .pricing {
+      background: linear-gradient(180deg, color-mix(in oklch, var(--navy) 96%, black), var(--navy-soft));
+      color: white;
+    }
+.nn-elementor-landing .pricing h2, .nn-elementor-landing .pricing h3 { color: white; }
+.nn-elementor-landing .pricing .section-head .muted { color: color-mix(in oklch, white 72%, var(--sage)); }
+.nn-elementor-landing .lot-card {
+      background: color-mix(in oklch, white 10%, transparent);
+      border: 1px solid color-mix(in oklch, white 20%, transparent);
+      border-radius: 24px;
+      padding: 24px;
+      display: grid;
+      gap: 12px;
+      min-height: 230px;
+    }
+.nn-elementor-landing .lot-card.active {
+      background: color-mix(in oklch, var(--sage) 18%, white 9%);
+      border-color: color-mix(in oklch, var(--sage) 72%, white);
+      box-shadow: 0 24px 80px color-mix(in oklch, var(--sage) 20%, transparent);
+    }
+.nn-elementor-landing .lot-label { color: color-mix(in oklch, white 72%, var(--sage)); font-weight: 780; font-size: 13px; text-transform: uppercase; }
+.nn-elementor-landing .price { font-size: clamp(38px, 5vw, 62px); font-weight: 860; letter-spacing: 0; line-height: 1; }
+.nn-elementor-landing .note { color: color-mix(in oklch, white 66%, var(--sand)); font-size: 13px; }
+.nn-elementor-landing .quote {
+      border-left: 4px solid var(--sage);
+      padding: 20px 22px;
+      background: color-mix(in oklch, var(--sage) 12%, white);
+      border-radius: 0 18px 18px 0;
+      color: var(--navy);
+      font-size: clamp(20px, 2.4vw, 28px);
+      line-height: 1.35;
+      font-weight: 760;
+    }
+.nn-elementor-landing .profile-photo {
+      overflow: hidden;
+      margin: 0;
+      min-height: 100%;
+      border-radius: 24px;
+      border: 1px solid color-mix(in oklch, var(--sage) 34%, var(--border));
+      background: var(--surface);
+      box-shadow: none;
+    }
+.nn-elementor-landing .profile-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      display: block;
+      object-fit: cover;
+      object-position: 52% center;
+    }
+.nn-elementor-landing .founder-panel {
+      display: grid;
+      grid-template-columns: minmax(280px, .82fr) minmax(0, 1fr);
+      gap: clamp(18px, 3vw, 34px);
+      align-items: stretch;
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: clamp(16px, 2.2vw, 24px);
+      background:
+        linear-gradient(145deg, color-mix(in oklch, var(--surface) 94%, var(--cream)), color-mix(in oklch, var(--sage) 8%, white));
+      box-shadow: 0 18px 56px color-mix(in oklch, var(--navy) 9%, transparent);
+    }
+.nn-elementor-landing .founder-copy {
+      align-content: center;
+      padding: clamp(10px, 2vw, 24px);
+    }
+.nn-elementor-landing .phase {
+      display: grid;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+.nn-elementor-landing .phase:first-child { border-top: 0; padding-top: 0; }
+.nn-elementor-landing .bonus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.nn-elementor-landing .bonus {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      background: linear-gradient(180deg, var(--surface), color-mix(in oklch, var(--sage) 8%, white));
+      display: grid;
+      gap: 12px;
+    }
+.nn-elementor-landing .bonus .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: color-mix(in oklch, var(--navy) 8%, white);
+      color: var(--navy);
+    }
+.nn-elementor-landing .offer {
+      border-radius: 34px;
+      background:
+        linear-gradient(135deg, color-mix(in oklch, var(--navy) 96%, black), color-mix(in oklch, var(--sage-deep) 78%, var(--navy)));
+      color: white;
+      padding: clamp(28px, 5vw, 54px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, .7fr);
+      gap: 28px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+.nn-elementor-landing .offer h2 { color: white; }
+.nn-elementor-landing .offer .muted { color: color-mix(in oklch, white 72%, var(--sage)); }
+.nn-elementor-landing .offer-list { display: grid; gap: 10px; margin-top: 20px; }
+.nn-elementor-landing .offer-item { display: flex; gap: 10px; align-items: center; }
+.nn-elementor-landing .offer-price {
+      border: 1px solid color-mix(in oklch, white 22%, transparent);
+      border-radius: 26px;
+      background: color-mix(in oklch, white 10%, transparent);
+      padding: 24px;
+      display: grid;
+      gap: 14px;
+    }
+.nn-elementor-landing .guarantee {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+.nn-elementor-landing .seal {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: color-mix(in oklch, var(--sage) 18%, white);
+      color: var(--sage-deep);
+      border: 1px solid color-mix(in oklch, var(--sage) 38%, var(--border));
+    }
+.nn-elementor-landing .seal svg { width: 42px; height: 42px; stroke: currentColor; stroke-width: 1.6; fill: none; }
+.nn-elementor-landing .faq { display: grid; gap: 12px; }
+.nn-elementor-landing .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+.nn-elementor-landing .faq-question {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 20px;
+      color: var(--navy);
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      font-weight: 780;
+      cursor: pointer;
+    }
+.nn-elementor-landing .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--muted);
+    }
+.nn-elementor-landing .faq-item.open .faq-answer { display: block; }
+.nn-elementor-landing .faq-item.open .faq-question span:last-child { transform: rotate(45deg); }
+.nn-elementor-landing .faq-question span:last-child { transition: transform .2s ease; font-size: 22px; line-height: 1; }
+.nn-elementor-landing .final-cta {
+      padding: 0 0 clamp(56px, 7vw, 104px);
+    }
+.nn-elementor-landing .final-cta h2 {
+      max-width: 880px;
+      line-height: 1.14;
+    }
+.nn-elementor-landing .final-cta .muted {
+      margin-top: 16px;
+      max-width: 720px;
+      line-height: 1.65;
+    }
+.nn-elementor-landing .cta-strip {
+      border-radius: 34px;
+      padding: clamp(26px, 4vw, 44px);
+      background: color-mix(in oklch, var(--cream) 68%, white);
+      border: 1px solid color-mix(in oklch, var(--sand), var(--border));
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+    }
+.nn-elementor-landing .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: calc(var(--nn-wp-admin-offset) + var(--nn-header-height) + 34px) 16px auto;
+      z-index: 99998;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+.nn-elementor-landing .mobile-menu.open { display: grid; gap: 8px; }
+.nn-elementor-landing .mobile-menu a {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      border-radius: 14px;
+      color: var(--navy);
+      font-weight: 720;
+    }
+.nn-elementor-landing .mobile-menu a:hover { background: color-mix(in oklch, var(--sage) 12%, white); }
+.nn-elementor-landing .sticky-cta {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%) translateY(120%);
+      z-index: 25;
+      width: min(680px, calc(100vw - 28px));
+      border: 1px solid color-mix(in oklch, white 60%, var(--sage));
+      border-radius: 999px;
+      padding: 8px;
+      background: color-mix(in oklch, var(--navy) 92%, transparent);
+      backdrop-filter: blur(16px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      color: white;
+      transition: transform .25s ease;
+      box-shadow: 0 18px 60px color-mix(in oklch, var(--navy) 28%, transparent);
+    }
+.nn-elementor-landing .sticky-cta.show { transform: translateX(-50%) translateY(0); }
+.nn-elementor-landing .sticky-cta.at-page-end { transform: translateX(-50%) translateY(140%); }
+.nn-elementor-landing .sticky-cta small { padding-left: 16px; color: color-mix(in oklch, white 76%, var(--sage)); }
+.nn-elementor-landing .sticky-cta .btn { min-height: 42px; }
+@media (max-width: 1024px) {
+.nn-elementor-landing .hero-grid, .nn-elementor-landing .split, .nn-elementor-landing .offer, .nn-elementor-landing .founder-panel { grid-template-columns: 1fr; }
+.nn-elementor-landing .hero-card { min-height: 560px; }
+.nn-elementor-landing .profile-photo, .nn-elementor-landing .profile-photo img { min-height: 460px; }
+.nn-elementor-landing .bonus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.nn-elementor-landing .grid-3 { grid-template-columns: 1fr; }
+
+    
+}
+@media (max-width: 820px) {
+.nn-elementor-landing { --container: min(100vw - 24px, 720px); }
+.nn-elementor-landing .nav-links, .nn-elementor-landing .nav-actions { display: none; }
+.nn-elementor-landing .menu-btn { display: inline-flex; }
+.nn-elementor-landing .hero { min-height: auto; }
+.nn-elementor-landing .hero-card { min-height: 500px; }
+.nn-elementor-landing .shift { grid-template-columns: 1fr; }
+.nn-elementor-landing .arrow { transform: rotate(90deg); }
+.nn-elementor-landing .grid-2 { grid-template-columns: 1fr; }
+.nn-elementor-landing .cta-strip { grid-template-columns: 1fr; }
+.nn-elementor-landing .guarantee { grid-template-columns: 1fr; }
+.nn-elementor-landing .sticky-cta { grid-template-columns: 1fr; border-radius: 24px; }
+.nn-elementor-landing .sticky-cta small { padding-left: 10px; }
+
+    
+}
+@media (max-width: 520px) {
+.nn-elementor-landing section { padding: 48px 0; }
+.nn-elementor-landing .hero-actions { display: grid; }
+.nn-elementor-landing .btn { width: 100%; min-height: 50px; padding-inline: 16px; }
+.nn-elementor-landing .hero-card { min-height: 440px; }
+.nn-elementor-landing .portrait-slot { inset: 12px; border-radius: 24px; }
+.nn-elementor-landing .hero-card-footer { left: 18px; right: 18px; bottom: 18px; }
+.nn-elementor-landing .profile-photo, .nn-elementor-landing .profile-photo img { min-height: 390px; }
+.nn-elementor-landing .bonus-grid { grid-template-columns: 1fr; }
+.nn-elementor-landing .card, .nn-elementor-landing .panel-pad, .nn-elementor-landing .lot-card { padding: 18px; }
+.nn-elementor-landing .offer { padding: 22px; border-radius: 26px; }
+.nn-elementor-landing .price { font-size: 42px; }
+.nn-elementor-landing .final-cta h2 {
+        font-size: clamp(36px, 10.8vw, 48px);
+        line-height: 1.16;
+      }
+.nn-elementor-landing .final-cta .muted {
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+    
+}

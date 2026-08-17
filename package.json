@@ -1,0 +1,11 @@
+{
+  "name": "natalia-neves",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Três versões da landing page de Natália Neves em HTML, CSS e JavaScript.",
+  "scripts": {
+    "validate": "node tools/validate.cjs",
+    "build": "node tools/build.cjs",
+    "start": "npx --yes serve . -l 4173"
+  }
+}
