@@ -28,9 +28,9 @@ for (const [index, route] of routes.entries()) {
   const html = fs.readFileSync(htmlPath, 'utf8');
   const checks = [
     ['headline correta', html.includes(expectedHeadlines[index])],
-    ['CSS externo', html.includes('href="styles.css"')],
-    ['JavaScript externo', html.includes('src="script.js"')],
-    ['imagem local', html.includes('../assets/natalia-neves-hero.png')],
+    ['CSS externo da rota', html.includes(`href="/${route}/styles.css"`)],
+    ['JavaScript externo da rota', html.includes(`src="/${route}/script.js"`)],
+    ['imagem local', html.includes('/assets/natalia-neves-hero.png')],
     ['sem hotlink antigo', !html.includes('eltonitokazu.com')],
     ['cinco perguntas de FAQ', (html.match(/class="faq-question"/g) || []).length === 5],
   ];
