@@ -30,7 +30,8 @@ for (const [index, route] of routes.entries()) {
     ['headline correta', html.includes(expectedHeadlines[index])],
     ['CSS externo da rota', html.includes(`href="/${route}/styles.css"`)],
     ['JavaScript externo da rota', html.includes(`src="/${route}/script.js"`)],
-    ['imagem local', html.includes('/assets/natalia-neves-hero.png')],
+    ['foto da hero', html.includes('/assets/natalia-neves-hero.jpg')],
+    ['foto da apresentação', html.includes('/assets/natalia-neves-apresentacao.jpg')],
     ['sem hotlink antigo', !html.includes('eltonitokazu.com')],
     ['cinco perguntas de FAQ', (html.match(/class="faq-question"/g) || []).length === 5],
   ];
@@ -43,7 +44,7 @@ for (const [index, route] of routes.entries()) {
   }
 }
 
-for (const asset of ['natalia-neves-hero.png', 'natalia-neves-sobre.png', 'og-natalia-neves.png']) {
+for (const asset of ['natalia-neves-hero.jpg', 'natalia-neves-apresentacao.jpg', 'og-natalia-neves.png']) {
   const assetPath = path.join(root, 'assets', asset);
   if (!fs.existsSync(assetPath) || fs.statSync(assetPath).size < 1024) {
     console.error(`Imagem ausente ou inválida: ${assetPath}`);
