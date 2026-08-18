@@ -3,6 +3,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const routes = ['a1', 'a2', 'a3'];
+const checkoutUrl = 'https://pay.kiwify.com.br/o4LJryy';
 const expectedHeadlines = [
   'Você pede com calma.<br>Mas só é ouvida quando grita.',
   '“Já falei mil vezes.”<br>E mesmo assim parece que ele não me escuta.',
@@ -32,6 +33,9 @@ for (const [index, route] of routes.entries()) {
     ['JavaScript externo da rota', html.includes(`src="/${route}/script.js"`)],
     ['foto da hero', html.includes('/assets/natalia-neves-hero.jpg')],
     ['foto da apresentação', html.includes('/assets/natalia-neves-apresentacao.jpg')],
+    ['data do evento atualizada', html.includes('29/08/2026 às 10h') && !html.includes('22/08/2026')],
+    ['sete CTAs conectados ao checkout', (html.match(new RegExp(`href="${checkoutUrl}"`, 'g')) || []).length === 7],
+    ['sem CTA de compra interno', !html.includes('href="#oferta"') && !html.includes('href="#garantia"')],
     ['sem hotlink antigo', !html.includes('eltonitokazu.com')],
     ['cinco perguntas de FAQ', (html.match(/class="faq-question"/g) || []).length === 5],
   ];
