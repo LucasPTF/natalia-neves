@@ -57,4 +57,32 @@ for (const asset of ['natalia-neves-hero.jpg', 'natalia-neves-apresentacao.jpg',
 }
 
 if (failed) process.exit(1);
-console.log('Validação concluída: /a1, /a2 e /a3 estão completas e independentes.');
+
+const thanksHtmlPath = path.join(root, 'obrigado', 'index.html');
+const thanksCssPath = path.join(root, 'obrigado', 'styles.css');
+for (const file of [thanksHtmlPath, thanksCssPath]) {
+  if (!fs.existsSync(file) || fs.statSync(file).size === 0) {
+    console.error(`Página de agradecimento ausente ou vazia: ${file}`);
+    failed = true;
+  }
+}
+
+if (fs.existsSync(thanksHtmlPath)) {
+  const thanksHtml = fs.readFileSync(thanksHtmlPath, 'utf8');
+  const thanksChecks = [
+    ['confirmação da inscrição', thanksHtml.includes('Sua vaga está confirmada.')],
+    ['data correta', thanksHtml.includes('29/08/2026 às 10h')],
+    ['orientação sobre a Kiwify', thanksHtml.includes('confirmação da Kiwify')],
+    ['proteção contra indexação', thanksHtml.includes('noindex, nofollow')],
+    ['CSS da rota', thanksHtml.includes('href="/obrigado/styles.css"')],
+  ];
+  for (const [name, ok] of thanksChecks) {
+    if (!ok) {
+      console.error(`/obrigado: falhou em ${name}`);
+      failed = true;
+    }
+  }
+}
+
+if (failed) process.exit(1);
+console.log('Validação concluída: /a1, /a2, /a3 e /obrigado estão completas.');

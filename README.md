@@ -7,6 +7,7 @@ Landing page da aula **O Protocolo para Ser Ouvida Sem Gritar**, convertida para
 - `/a1` — ângulo “Você pede com calma”
 - `/a2` — ângulo “Já falei mil vezes”
 - `/a3` — ângulo “Você não queria virar a mãe que grita”
+- `/obrigado` — confirmação pós-compra e orientações para a participante
 
 Cada rota contém seus próprios arquivos `index.html`, `styles.css` e `script.js`. As imagens ficam em `assets/` e são compartilhadas pelas três versões.
 
